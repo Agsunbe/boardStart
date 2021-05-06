@@ -117,6 +117,12 @@
 			<version>1.2</version>
 		</dependency>
 		
+		<!-- Logback(디버깅) -->        
+        <dependency>
+		     <groupId>ch.qos.logback</groupId>
+		     <artifactId>logback-classic</artifactId>
+		     <version>1.0.13</version>
+		</dependency>
 		
 		<!-- Test -->
 		<dependency>
@@ -145,7 +151,7 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-            
+
         <!-- MySQL -->
         <dependency>
             <groupId>mysql</groupId>

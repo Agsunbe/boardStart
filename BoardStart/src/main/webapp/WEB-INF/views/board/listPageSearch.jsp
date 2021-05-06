@@ -49,14 +49,14 @@ console.log("num 확인하기" + "%s" , num)
 
 <div>
 <c:if test="${page.prev}">
- <span>[ <a href="/board/listPage?num=${page.startPageNum - 1}">이전</a> ]</span>
+ <span>[ <a href="/board/listPageSearch?num=${page.startPageNum - 1}">이전</a> ]</span>
 </c:if>
 
 <c:forEach begin="${page.startPageNum}" end="${page.endPageNum}" var="num">
   <span>
   
 		<c:if test="${select != num}">
-			<a href="/board/listPage?num=${num}">${num}</a> 
+			<a href="/board/listPageSearch?num=${num}">${num}</a> 
 		</c:if>
 		
 		<c:if test="${select == num}">
@@ -67,7 +67,7 @@ console.log("num 확인하기" + "%s" , num)
 </c:forEach>
 
 <c:if test="${page.next}">
- <span>[ <a href="/board/listPage?num=${page.endPageNum + 1}">다음</a> ]</span>
+ <span>[ <a href="/board/listPageSearch?num=${page.endPageNum + 1}">다음</a> ]</span>
 </c:if>
 
 <!-- 
@@ -78,6 +78,20 @@ console.log("num 확인하기" + "%s" , num)
   </span>
  </c:forEach>
  -->
+
+<div>
+  <select name="searchType">
+      <option value="title">제목</option>
+         <option value="content">내용</option>
+      <option value="title_content">제목+내용</option>
+      <option value="writer">작성자</option>
+  </select>
+  
+  <input type="text" name="keyword" />
+  
+  <button type="button">검색</button>
+ </div>
+
 </div>
 
 

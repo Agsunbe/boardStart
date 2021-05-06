@@ -62,4 +62,10 @@ public class BoardServiceImpl implements BoardService {
 	public List listPage(int displayPost, int postNum) throws Exception {
 	 return dao.listPage(displayPost, postNum);
 	}
+	
+	// 게시물 목록 + 페이징 + 검색
+	@Override
+	public List listPageSearch(int displayPost, int postNum) throws Exception {
+	 return dao.listPage(displayPost, postNum);	
+	}
 }
